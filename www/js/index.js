@@ -44,12 +44,4 @@ $(function() {
             case "login": redirect("login.html"); break;
         }
     });
-	
-	var ul = $("ul[name=group_list]").html("");
-	ajaxGet(temService + "IndexActivities",null, function(data) {
-		var d = XML2JSON(data);
-		for (var i = 0, arr; arr = d[i++];) {
-			ul.append("<li >" + arr[0] + "</li>");
-		}
-	});
 })
