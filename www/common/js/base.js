@@ -1,5 +1,5 @@
 window.win = window, win.doc = win.document, win.sess = win.sessionStorage, win.stag = win.localStorage;
-win.host = "http://60.187.0.163/", win.serviceHost = "http://60.187.0.163:2544/", win.fileHost = "http://60.187.0.163:15041/Module/";
+win.serviceHost = "http://60.187.6.215:2544", win.fileHost = "http://60.187.6.215:25041";
 win.volService = serviceHost + "VolunteerWebService.asmx/", win.temService = serviceHost + "TeamWebService.asmx/", win.nwsService = serviceHost + "NewsWebService.asmx/", win.hlpService = serviceHost + "HelpWebService.asmx/";
 win.skinPath = fileHost + "FilesUp/UserIcon/", win.filePath = fileHost + "FilesUp/Project/";
 win.needAskExit = undefined, win.needAskLogout = undefined;
@@ -48,8 +48,8 @@ win.getlocalItem = function(k) {
 	return stag.getItem(k);
 }
 
-win.good = function(msg) {
-	alert(msg, null, "恭喜您", "确 定");
+win.good = function(msg, func) {
+	alert(msg, func, "恭喜您", "确 定");
 }
 
 win.sorry = function(msg, func) {
@@ -81,7 +81,7 @@ win.ajaxGet = function(url, data, func, sync) {
 		"global": false,
 		"success": func,
 		"error": function(xhr, type, err) {
-			sorry("网络不给力！\n 或\n服务器出错！");
+			sorry("网络很不给力，请检查！");
 		}
 	});
 }
