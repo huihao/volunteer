@@ -1,9 +1,13 @@
 window.win = window, win.doc = win.document, win.sess = win.sessionStorage, win.stag = win.localStorage;
-win.serviceHost = "http://192.168.1.136:2544", win.fileHost = "192.168.1.136:15041";
+win.host = "http://192.168.1.99:", win.serviceHost = "http://web.happylearn.net/", win.fileHost = "http://www.vasx.org/Module/";
 win.volService = serviceHost + "VolunteerWebService.asmx/", win.temService = serviceHost + "TeamWebService.asmx/", win.nwsService = serviceHost + "NewsWebService.asmx/", win.hlpService = serviceHost + "HelpWebService.asmx/";
 win.skinPath = fileHost + "FilesUp/UserIcon/", win.filePath = fileHost + "FilesUp/Project/";
 win.needAskExit = undefined, win.needAskLogout = undefined;
 doc.addEventListener("deviceready", function(e) {
+	if (window.device.version.substr(0,1) === '7') {
+		document.body.style.marginTop = "20px";
+	    document.getElementById("fixed").style.top = "20px";
+	}
 	navigator.notification && (win.nav = navigator, win.alert = nav.notification.alert, win.confirm = nav.notification.confirm, win.vibrate = nav.notification.vibrate);
 	nav.connection.type == Connection.NONE && sorry("网络连接不可用，请检查！", nav.app.exitApp);
 	needAskLogout === undefined || doc.addEventListener("backbutton", needAskLogout ? logout : goBack, false);
@@ -48,8 +52,8 @@ win.getlocalItem = function(k) {
 	return stag.getItem(k);
 }
 
-win.good = function(msg, func) {
-	alert(msg, func, "恭喜您", "确 定");
+win.good = function(msg) {
+	alert(msg, null, "恭喜您", "确 定");
 }
 
 win.sorry = function(msg, func) {
@@ -81,7 +85,7 @@ win.ajaxGet = function(url, data, func, sync) {
 		"global": false,
 		"success": func,
 		"error": function(xhr, type, err) {
-			sorry("网络很不给力，请检查！");
+			sorry("网络不给力！\n 或\n服务器出错！");
 		}
 	});
 }
