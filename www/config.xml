@@ -10,7 +10,7 @@
   <feature name="http://api.phonegap.com/1.0/network" />
   <feature name="http://api.phonegap.com/1.0/notification" />
   <!-- Common -->
-  <preference name="phonegap-version" value="2.9.0" />
+  <preference name="phonegap-version" value="3.1.0" />
   <preference name="orientation" value="portrait" />
   <preference name="fullscreen" value="true" />
   <preference name="target-device" value="universal" />
@@ -25,8 +25,8 @@
   <!-- BlackBerry -->
   <preference name="disable-cursor" value="true" />
   <!-- Android -->
-  <preference name="android-minSdkVersion" value="8" />
-  <preference name="android-targetSdkVersion" value="11" />
+  <preference name="android-minSdkVersion" value="11" />
+  <preference name="android-targetSdkVersion" value="14" />
   <preference name="android-installLocation" value="auto" />
   <preference name="splash-screen-duration" value="4000" />
   <!-- Icon -->
@@ -50,9 +50,7 @@
   <gap:splash gap:platform="ios" height="1004" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
   <gap:splash gap:platform="ios" height="2008" src="res/screen/ios/screen-ipad-portrait-2x.png" width="1536" />
   <!-- Access -->
-  <access origin="http://www.vasx.org" />
-  <access origin="http://web.happylearn.net" />
-  <access origin="http://60.187.6.215" />
+  <access origin="http://192.168.1.136" />
   <!-- Build -->
   <gap:platform name="ios" />
   <gap:platform name="android" />
