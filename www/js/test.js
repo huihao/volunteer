@@ -15,6 +15,7 @@ $(function () {
  $("#test").click(function (e) {
       ajaxGet("http://60.187.18.235:15041/ImageWebService.asmx/HelloWorld", null, function(data) {
         	var d = XML2JSON(data);
+			$("#hello").val(d);
 			good(d);
         });
  });
