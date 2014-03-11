@@ -14,7 +14,8 @@ $(function () {
  });
  $("#test").click(function (e) {
       ajaxGet("http://60.187.18.235:15041/ImageWebService.asmx/HelloWorld", null, function(data) {
-        	good(data);
+        	var d = XML2JSON(data);
+			good(d);
         });
  });
 })
