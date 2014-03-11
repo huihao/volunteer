@@ -40,7 +40,7 @@ $(function() {
             case "home": redirect("index.html"); break;
             case "news": redirect("nws/list.html"); break;
             case "activity": redirect("vol/launch-activity.html"); break;
-            case "help": redirect("help.html"); break;
+            case "help": redirect("test.html"); break;
             case "login": redirect("login.html"); break;
         }
     });
