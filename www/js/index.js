@@ -7,7 +7,7 @@ $(function() {
             uls.eq(0).append("<li id='n_" + arr[0] + "'><nobr>" + arr[1] + "</nobr><span>[" + arr[2] + "]</span></li>");
         }
     });
-    ajaxGet(nwsService + "LaunchTop", null, function(data) {
+    ajaxGet("http://192.168.1.136:15041/ImageWebService.asmx/Launch", null, function(data) {
         var d = XML2JSON(data);
         for (var i = 0, arr; arr = d[i++];) {
             uls.eq(1).append("<li id='a_" + arr[0] + "'><nobr>" + arr[1] + "</nobr><span>[" + arr[2] + "]</span></li>");
