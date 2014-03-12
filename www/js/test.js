@@ -1,7 +1,6 @@
 needAskLogout = false;
 $(function () {
-	$("#hello").val("test");
-	ajaxGet("http://192.16.1.136:15041/ImageWebService.asmx/HelloWorld", null, function(data) {
+	ajaxGet("http://192.168.1.136:15041/ImageWebService.asmx/HelloWorld", null, function(data) {
 		    $("#txt_title").val(data);
         	var d = XML2JSON(data);
 			$("#hello").val(d);
@@ -14,7 +13,7 @@ $(function () {
         var phonev = $("#txt_phone").val();
         var addressv = $("#txt_address").val();
         var contentv = $("#txt_content").val();
-		ajaxGet("http://192.16.1.136:15041/ImageWebService.asmx/HelloWorld", null, function(data) {
+		ajaxGet("http://192.168.1.136:15041/ImageWebService.asmx/HelloWorld", null, function(data) {
         	var d = XML2JSON(data);
 			$("#hello").val(d);
 			alert(d);
@@ -22,7 +21,7 @@ $(function () {
        
  });
  $("#test").click(function (e) {
-      ajaxGet("http://60.187.18.235:15041/ImageWebService.asmx/HelloWorld", null, function(data) {
+      ajaxGet("http://192.168.1.136:15041/ImageWebService.asmx/HelloWorld", null, function(data) {
         	var d = XML2JSON(data);
 			$("#hello").val(d);
 			good(d);
