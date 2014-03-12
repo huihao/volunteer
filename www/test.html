@@ -13,7 +13,21 @@
 <script src="js/test.js"></script>
 </head>
 <body>
-	 <h1>Example</h1>
-    <p>Upload File</p>
+	<header id="fixed">
+        <div onClick="goBack()">&lt;</div><h1>求助信息</h1><div></div>
+    </header>
+	<section>
+		<ul>
+        	<li><span>求助标题</span><div><input id="txt_title" type="text" placeholder="请用20文字左右简洁说明"></div></li>
+            <li><span>姓名</span><div><input id="txt_name" type="text"></div></li>
+            <li><span>年龄</span><div><input id="txt_age" type="text"></div></li>
+            <li><span>电话</span><div><input id="txt_phone" type="text"></div></li>
+            <li><span>地址</span><div><input id="txt_address" type="text"></div></li>
+            <li><span>求助详情</span><div><textarea id="txt_content" rows="3"></textarea></div></li>
+        </ul>
+        <button type="button" id="commit" class="main"><img src="img/ct.png" width="30" height="25">提 交</button>
+		<button type="button" id="test" class="main"><img src="img/ct.png" width="30" height="25">test</button>
+		<input id="hello" type="text" />
+	</section>
 </body>
 </html>
