@@ -15,6 +15,20 @@ $(function () {
                        $("#txt_title").val(result.d);
                     }
                 });    
+	$.ajax({
+		"type": "GET",
+	    "contentType":"application/json",
+		"url": "http:192.168.1.136:15041/ImageWebService.asmx/HelloWorld",
+		"data": null,
+		"dataType": "json",
+		"async": !sync,
+		"timeout": 21000,
+		"global": false,
+		"success": function(result){ $("#txt_title").val(result.d);alert(result)},
+		"error": function(xhr, type, err) {
+			sorry("网络不给力！\n 或\n服务器出错！");
+		}
+	});
 
    
   $("#commit").click(function (e) {
