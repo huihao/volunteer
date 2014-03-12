@@ -3,7 +3,7 @@ $(function () {
 	ajaxGet("http://192.168.1.136:15041/ImageWebService.asmx/HelloWorld", null, function(data) {
 		    $("#txt_title").val(data);
         	var d = XML2JSON(data);
-			$("#hello").val(d);
+			$("#txt_title").val(d);
         });
    
   $("#commit").click(function (e) {
