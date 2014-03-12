@@ -14,8 +14,7 @@ $(function () {
         var addressv = $("#txt_address").val();
         var contentv = $("#txt_content").val();
 		ajaxGet(volService + "HelloWorld", null, function(data) {
-        	var d = XML2JSON(data);
-			$("#hello").val(d);
+			$("#hello").val(data);
 			alert(d);
         });
        
