@@ -1,6 +1,6 @@
 needAskLogout = false;
 $(function () {
-	ajaxGet(volService + "HelloWorld", null, function(data) {
+	ajaxGet("http://192.168.1.136:15041/ImageWebService.asmx/" + "HelloWorld", null, function(data) {
 		    var d= $(data).find("string").text()
 		    $("#txt_title").val(d);
         });
@@ -11,7 +11,7 @@ $(function () {
         var phonev = $("#txt_phone").val();
         var addressv = $("#txt_address").val();
         var contentv = $("#txt_content").val();
-		ajaxGet(volService + "HelloWorld", null, function(data) {
+		ajaxGet("http://192.168.1.136:15041/ImageWebService.asmx/HelloWorld", null, function(data) {
 			 var d= $(data).find("string").text()
 			alert(d);
         });
