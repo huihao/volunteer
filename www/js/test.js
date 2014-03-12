@@ -5,20 +5,11 @@ $(function () {
 		    $("#txt_title").val(d);
         });
   $("#commit").click(function (e) {
-        var titlev = $("#txt_title").val();
-        var namev = $("#txt_name").val();
-        var agev = $("#txt_age").val();
-        var phonev = $("#txt_phone").val();
-        var addressv = $("#txt_address").val();
-        var contentv = $("#txt_content").val();
-		ajaxGet("http://60.187.5.98:15041/ImageWebService.asmx/HelloWorld", null, function(data) {
-			 var d= $(data).find("string").text()
-			alert(d);
-        });
+       capturePhoto()
        
  });
  $("#test").click(function (e) {
-     capturePhoto()
+     getPhoto()
  });
 
    var pictureSource;   //picture source
