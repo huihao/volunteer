@@ -1,6 +1,7 @@
 article {
 	padding: 0;
 	padding-top: 7em;
+	padding-bottom: 5em;
 }
 
 article ul {
@@ -16,7 +17,7 @@ article ul li {
 	border-bottom: #1d1c1e solid 0.2em;
 	background: url(../../img/ht.png) no-repeat;
 	background-position: 2em 2.4em;
-	background-size: 31px 23px;
+	background-size: 2.5em;
 }
 
 article ul li span {
@@ -48,9 +49,9 @@ article ul li button {
 article ul li button img {
 	margin: 0;
 }
-
 footer {
 	position: fixed;
+	background-color: #2b2c2f;
 	bottom: 0;
 	width: 100%;
 	-webkit-box-shadow: 0 -2px 5px #000;

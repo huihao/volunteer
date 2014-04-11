@@ -7,11 +7,19 @@ $(function() {
             uls.eq(0).append("<li id='n_" + arr[0] + "'><nobr>" + arr[1] + "</nobr><span>[" + arr[2] + "]</span></li>");
         }
     });
-    ajaxGet("http://192.168.1.136:15041/ImageWebService.asmx/Launch", null, function(data) {
+    ajaxGet(nwsService + "LaunchTop", null, function(data) {
         var d = XML2JSON(data);
         for (var i = 0, arr; arr = d[i++];) {
             uls.eq(1).append("<li id='a_" + arr[0] + "'><nobr>" + arr[1] + "</nobr><span>[" + arr[2] + "]</span></li>");
         }
+    });
+
+    $("#news_title").click(function(e) {
+    	redirect("nws/list.html");
+    });
+    
+    $("#activity_title").click(function(e) {
+    	redirect("vol/launch-activity.html");
     });
 
     uls.click(function(e) {
@@ -40,8 +48,23 @@ $(function() {
             case "home": redirect("index.html"); break;
             case "news": redirect("nws/list.html"); break;
             case "activity": redirect("vol/launch-activity.html"); break;
-            case "help": redirect("test.html"); break;
+            case "imgnew": redirect("imgnws/list.html"); break;
+            case "help": redirect("help.html"); break;
             case "login": redirect("login.html"); break;
         }
     });
+    
+    ajaxGet(groupService + "List",null,function(data){
+    	var d = XML2JSON(data);
+    	var guls = $("section article ul[name]").empty();
+    	for(var i in d){
+    		var arr = d[i];
+    		guls.append($("<li>").attr("gid",arr[0]).text(arr[1]));
+    	}
+    	guls.find("li").click(function(){
+    		setItem("gid", $(this).attr("gid"));
+    		redirect("group/detail.html");
+        });
+    });
+    
 })

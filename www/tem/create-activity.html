@@ -9,20 +9,19 @@
 <link rel="stylesheet" href="../css/tem/activities.css">
 <link rel="stylesheet" href="../css/help.css">
 <style type="text/css">
-option {
-	color: #1e1f21;
+section ul {
+	margin-bottom: 1em;
 }
 </style>
-<script src="../phonegap.js"></script>
+<script src="../cordova.js"></script>
 <script src="../common/js/zepto.js"></script>
 <script src="../common/js/base.js"></script>
-<script src="../js/vol/create.js"></script>
+<script src="../js/tem/create.js"></script>
 </head>
 <body>
 	<header id="fixed">
 		<div onClick="goBack()">&lt;</div>
 		<h1>创建活动</h1>
-		<div></div>
 	</header>
 	<section>
 		<ul>
@@ -33,8 +32,6 @@ option {
 			<li><span>活动类别</span>
 				<div>
 					<select id="sel_type">
-						<option>16</option>
-						<option>123456</option>
 					</select>
 				</div></li>
 			<li><span>活动地点</span>
@@ -43,28 +40,19 @@ option {
 				</div></li>
 			<li><span>活动人数</span>
 				<div>
-					<input id="txt_people" type="text" value="10">
+					<input id="txt_people" type="number" value="10">
 				</div></li>
-			<li><span>活动内容</span>
+			<li><span id="content-label">活动内容</span>
 				<div>
-					<textarea id="txt_content" rows="3"></textarea>
+					<textarea id="txt_content" rows="4"></textarea>
 				</div></li>
-			<li><span>报名截止日期</span>
+			<li><span>活动日期</span>
 				<div>
-					<input id="txt_apply_date" type="text">
+					<input id="txt_start_date" type="date" placeholder="yyyy-MM-dd">
 				</div></li>
-			<li><span>活动开展日期</span>
+			<li><span>时长/小时</span>
 				<div>
-					<input id="txt_start_date" type="text">
-				</div></li>
-			<li><span>活动时长/小时</span>
-				<div>
-					<input id="txt_time" type="text" value="2">
-				</div></li>
-			<li><span style="color: red;">填写注意事项</span>
-				<div style="color: #CC33CC">
-					1.项目时长和项目人数必须是是<font style="color: red">整数</font><br>2.报名截止日期必须<font
-						style="color: red">小于</font>项目开展日期
+					<input id="txt_time" type="number" value="2">
 				</div></li>
 			<li><span>联系人</span>
 				<div>

@@ -8,12 +8,12 @@ $(function () {
         var addressv = $("#txt_address").val();
         var contentv = $("#txt_content").val();
         
-        if (titlev === "" || namev === "" || agev === "" || phonev === "" || addressv === "" || contentv === "") sorry("ÇëÏÈÍêÉÆÇóÖúĞÅÏ¢£¡");
-        else if (!/^\d+$/i.test(agev)) sorry("ÄêÁäÖ»ÄÜÊäÈëÊı×Ö£¡"), $("#txt_age").focus();
-        else if (!/^\d+$/i.test(phonev)) sorry("µç»°Ö»ÄÜÊäÈëÊı×Ö£¡"), $("#txt_phone").focus();
+        if (titlev === "" || namev === "" || agev === "" || phonev === "" || addressv === "" || contentv === "") sorry("è¯·å…ˆå®Œå–„æ±‚åŠ©ä¿¡æ¯ï¼");
+        else if (!/^\d+$/i.test(agev)) sorry("å¹´é¾„åªèƒ½è¾“å…¥æ•°å­—ï¼"), $("#txt_age").focus();
+        else if (!/^\d+$/i.test(phonev)) sorry("ç”µè¯åªèƒ½è¾“å…¥æ•°å­—ï¼"), $("#txt_phone").focus();
         else ajaxGet(hlpService + "Help", { title: titlev, name: namev, age: agev, phone: phonev, address: addressv, content: contentv }, function(data) {
         	var d = XML2JSON(data);
-        	d === 0 ? sorry("Ìá½»ĞÅÏ¢Ê§°Ü£¡") : (good("Ìá½»ĞÅÏ¢³É¹¦£¡"), goBack());
+        	d === 0 ? sorry("æ±‚åŠ©å¤±è´¥ï¼") : (good("æ±‚åŠ©æˆåŠŸï¼"), goBack());
         });
  });
 
@@ -27,6 +27,7 @@ $(function () {
          case "home": redirect("index.html"); break;
          case "news": redirect("nws/list.html"); break;
          case "activity": redirect("vol/launch-activity.html"); break;
+         case "imgnew": redirect("imgnws/list.html"); break;
          case "help": redirect("help.html"); break;
          case "login": redirect("login.html"); break;
      }

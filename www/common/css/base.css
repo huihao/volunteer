@@ -35,7 +35,7 @@ ul {
 	list-style: none;
 }
 
-textarea,select,input[type='text'],input[type='password'] {
+textarea,input[type='text'],input[type='password'],select,input[type='date'],input[type='number'] {
 	border: 0;
 	-webkit-border-radius: 0.2em;
 	width: 100%;
@@ -58,25 +58,26 @@ button {
 	background-color: #505259;
 	color: #fff;
 	padding: 0.5em 1em;
-	-webkit-box-shadow: 0 5px 0 #202123;
+	-webkit-box-shadow: 0 0.2em 0 #202123;
 	margin: 0.3em 0;
 }
 
 button img {
 	vertical-align: middle;
 	margin-left: 0.7em;
+	height: 2.1em;
 }
 
 button.main {
 	background-color: #cc162f;
-	-webkit-box-shadow: 0 5px 0 #450b0b;
+	-webkit-box-shadow: 0 0.2em 0 #450b0b;
 }
 
 header[id='fixed'] {
 	position: fixed;
 	top: 0;
 	background-color: #cc162f;
-	-webkit-box-shadow:0 2px 5px #000;
+	-webkit-box-shadow: 0 0.2em 5px #000;
 	width: 100%;
 }
 
