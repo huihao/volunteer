@@ -57,7 +57,7 @@
   <!-- Access -->
   <access origin="http://www.vasx.org" />
   <access origin="http://ws.vasx.org" />
-  <access origin="http://60.187.16.109:2544" />
+  <access origin="http://60.187.13.138:2544" />
   <access origin="*" />
   <!-- Build -->
   <gap:platform name="ios" />
