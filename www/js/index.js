@@ -48,23 +48,8 @@ $(function() {
             case "home": redirect("index.html"); break;
             case "news": redirect("nws/list.html"); break;
             case "activity": redirect("vol/launch-activity.html"); break;
-            case "imgnew": redirect("imgnws/list.html"); break;
             case "help": redirect("help.html"); break;
             case "login": redirect("login.html"); break;
         }
     });
-    
-    ajaxGet(groupService + "List",null,function(data){
-    	var d = XML2JSON(data);
-    	var guls = $("section article ul[name]").empty();
-    	for(var i in d){
-    		var arr = d[i];
-    		guls.append($("<li>").attr("gid",arr[0]).text(arr[1]));
-    	}
-    	guls.find("li").click(function(){
-    		setItem("gid", $(this).attr("gid"));
-    		redirect("group/detail.html");
-        });
-    });
-    
 })

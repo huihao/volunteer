@@ -18,7 +18,4 @@ $(function() {
 		setItem("activity_id", tag.id);
 		redirect((e.target.type === "button" || e.target.parentNode.type === "button" ? "scanning" : "activity") + ".html");
     });
-	$("#create").click(function(){
-		redirect("create-activity.html");
-	});
 })

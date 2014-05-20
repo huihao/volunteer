@@ -1,7 +1,6 @@
 article {
 	padding: 0;
 	padding-top: 7em;
-	padding-bottom: 5em;
 }
 
 article ul {
@@ -48,12 +47,4 @@ article ul li button {
 
 article ul li button img {
 	margin: 0;
-}
-footer {
-	position: fixed;
-	background-color: #2b2c2f;
-	bottom: 0;
-	width: 100%;
-	-webkit-box-shadow: 0 -2px 5px #000;
-	text-align: center;
 }
