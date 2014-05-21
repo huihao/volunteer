@@ -8,13 +8,16 @@
   <gap:plugin name="org.apache.cordova.network-information" />
   <gap:plugin name="org.apache.cordova.dialogs" />
   <gap:plugin name="org.apache.cordova.vibration" />
+  <gap:plugin name="org.apache.cordova.camera" />
+  <gap:plugin name="org.apache.cordova.file" />
+  <gap:plugin name="org.apache.cordova.file-transfer" />
   <gap:plugin name="com.phonegap.plugins.barcodescanner" />
   <!-- Permission -->
   <feature name="http://api.phonegap.com/1.0/device" />
   <feature name="http://api.phonegap.com/1.0/network" />
   <feature name="http://api.phonegap.com/1.0/notification" />
   <!-- Common -->
-  <preference name="phonegap-version" value="3.3.0" />
+  <preference name="phonegap-version" value="3.1.0" />
   <preference name="orientation" value="portrait" />
   <preference name="fullscreen" value="true" />
   <!-- iOS -->
@@ -22,11 +25,14 @@
   <preference name="ios-statusbarstyle" value="black-opaque" />
   <preference name="detect-data-types" value="false" />
   <preference name="exit-on-suspend" value="true" />
+  <preference name="UIStatusBarHidden" value="true" />
+	<preference name="UIViewControllerBasedStatusBarAppearance"
+		value="false" />
   <!-- Android -->
   <preference name="android-minSdkVersion" value="11" />
   <preference name="android-targetSdkVersion" value="15" />
   <preference name="android-installLocation" value="auto" />
-  <preference name="android-windowSoftInputMode" value="stateUnspecified|adjustUnspecified" />
+  <!-- preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" /-->
   <preference name="splash-screen-duration" value="4000" />
   <!-- Icon -->
   <icon src="res/icon/icon.png" />
@@ -50,7 +56,9 @@
   <gap:splash gap:platform="ios" height="2008" src="res/screen/ios/screen-ipad-portrait-2x.png" width="1536" />
   <!-- Access -->
   <access origin="http://www.vasx.org" />
-  <access origin="http://web.happylearn.net" />
+  <access origin="http://ws.vasx.org" />
+  <access origin="http://60.187.16.57:2544" />
+  <access origin="*" />
   <!-- Build -->
   <gap:platform name="ios" />
   <gap:platform name="android" />

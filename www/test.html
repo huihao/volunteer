@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+<link rel="stylesheet" href="common/css/base.css">
+<link rel="stylesheet" href="css/index.css" />
+<link rel="stylesheet" href="css/help.css">
+ <style>
+            
+            .button-block {
+                    margin-bottom: 0;
+                    box-shadow: inset 0 1px 1px rgba(255, 255, 255, .4), 0 1px rgba(255, 255, 255, .8);
+                  display: block;
+                  padding: 11px 0 13px;
+                  margin-bottom: 10px;
+                  font-size: 16px;
+                
+            }
+            
+            .button-main{
+                color: #fff;
+                  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+                background-color: #1eafe7;
+                background-image: -webkit-linear-gradient(top, #1eafe7 0, #1a97c8 100%);
+                background-image: linear-gradient(to bottom, #1eafe7 0, #1a97c8 100%);
+                border: 1px solid #117aaa;
+                font-weight: bold;
+                line-height: 18px;
+                text-align: center;
+                vertical-align: top;
+                cursor: pointer;
+                border-radius: 3px;
+                box-shadow: inset 0 1px 1px rgba(255, 255, 255, .4), 0 1px 2px rgba(0, 0, 0, .05);
+                -webkit-transition: background .3s linear;
+
+            }
+            
+        </style>
+<script src="phonegap.js"></script>
+<script src="common/js/zepto.js"></script>
+<script src="common/js/base.js"></script>
+<script src="js/test.js"></script>
+<script src="common/js/when.js"></script>
+</head>
+<body>
+	<header id="fixed">
+        <div onClick="goBack()">&lt;</div><h1>求助信息</h1><div></div>
+    </header>
+	<section>
+		<ul>
+        	<li><span>求助标题</span><div><input id="txt_title" type="text" placeholder="请用20文字左右简洁说明"></div></li>
+            <li><span>姓名</span><div><input id="txt_name" type="text"></div></li>
+            <li><span>年龄</span><div><input id="txt_age" type="text"></div></li>
+            <li><span>电话</span><div><input id="txt_phone" type="text"></div></li>
+            <li><span>地址</span><div><input id="txt_address" type="text"></div></li>
+            <li><span>求助详情</span><div><textarea id="txt_content" rows="3"></textarea></div></li>
+        </ul>
+        <button type="button" id="commit" class="main"><img src="img/ct.png" width="30" height="25">提 交</button>
+		<button type="button" id="test" class="main"><img src="img/ct.png" width="30" height="25">test</button>
+		<input id="hello" type="text" />
+	</section>
+     <div class="button-block button-main" id='upload'>拍照上传</div>
+</body>
+</html>
